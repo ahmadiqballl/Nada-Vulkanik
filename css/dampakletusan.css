@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'PoppinsBold';
+    src: url('asset/poppins.bold.ttf');
+}
+@font-face {
+    font-family: 'PoppinsRegular';
+    src: url('asset/poppins.regular.ttf');
+}
+
+.navbarr {
+  background-color: #0F0E17;
+  color: #FFFFFE;
+  padding: 1rem;
+}
+
+.navbarr nav {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0.5rem 1rem;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.Logo h2 {
+  font-family: 'PoppinsBold', sans-serif;
+  margin: 0;
+  font-size: 1.1rem; /* diperkecil dari 1.5rem */
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem; /* space between links */
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-family: 'PoppinsRegular', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #FF8906;
+  text-shadow: 0 0 8px #FF8906, 0 0 16px #FF8906;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  content: ' ▼';
+  font-size: 0.7em;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #22223b;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.7rem 1rem;
+  background: #FFFFFE;
+  color: #0F0E17;
+  text-decoration: none;
+  font-family: 'PoppinsRegular', sans-serif;
+  transition: background 0.1s, color 0.1s;
+}
+
+.dropdown-menu a:hover {
+  background: #FF8906;
+  color: #22223b;
+  text-shadow: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
