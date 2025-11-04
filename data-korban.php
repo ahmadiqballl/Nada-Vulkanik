@@ -35,88 +35,34 @@ if (!empty($_GET)) {
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/data-korban.css" />
 </head>
 <body>
 
  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">
-        <img src="assets/footage/volcanoria.png" alt="logo" width="70" height="70" />
-        Volcanoria
-      </a>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" style="color: #ff8c32" href="index.php">Home</a>
-          </li>
-
-          <!-- Dropdown Menu untuk Informasi -->
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="informasiDropdown"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Informasi
-            </a>
-            <ul class="dropdown-menu fade-in" aria-labelledby="informasiDropdown">
-              <li><a class="dropdown-item" href="informasi.php">Definisi Gunung Berapi</a></li>
-              <li><a class="dropdown-item" href="jenis-gunung.php">Jenis Letusan</a></li>
-              <li><a class="dropdown-item" href="statistik.php">Dampak Letusan</a></li>
-              <li><a class="dropdown-item" href="statistik.php">Mitigasi</a></li>
-              <li><a class="dropdown-item" href="statistik.php">Penanggulangan</a></li>
-            </ul>
-          </li>
-          <!-- Akhir Dropdown -->
-
-          <li class="nav-item">
-            <a class="nav-link" href="berita.php">Berita</a>
-          </li>
-        </ul>
-      </div>
+   <body>
+    <div class="navbarr">
+      <nav>
+        <div class="Logo">
+          <img src="asset/logo.png" alt="Logo" class="logo-img" />
+          <h2>Nada Vulkanik</h2>
+        </div>
+        <div class="nav-links">
+          <a href="index.php">Beranda</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Pengetahuan Kebencanaan</a>
+            <div class="dropdown-menu">
+              <a href="definisi.php">Definisi Bencana Gunung Meletus</a>
+              <a href="jenis.php">Jenis Letusan</a>
+              <a href="dampak.php">Dampak Letusan</a>
+              <a href="penanggulangan.php">Penanggulangan</a>
+              <a href="mitigasi.php">Mitigasi</a>
+            </div>
+          </div>
+          <a href="tentang.php">Tentang</a>
+        </div>
+      </nav>
     </div>
-  </nav>
-  <!-- END NAVBAR -->
-
-  <!-- CSS untuk Animasi Dropdown -->
-  <style>
-    .dropdown-menu {
-      opacity: 0;
-      transform: translateY(10px);
-      transition: all 0.3s ease;
-      visibility: hidden;
-    }
-
-    .dropdown-menu.show {
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
-
-    .navbar {
-      transition: box-shadow 0.3s ease;
-    }
-
-    .navbar.scrolled {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-  </style>
-
 <main>
   <!-- HEADER -->
  <div class="container-fluid py-5 page-header text-center text-white" 
@@ -232,8 +178,8 @@ if (!empty($_GET)) {
       <!-- Kolom 1: About -->
       <div class="col-md-6 col-lg-4">
         <div class="d-flex align-items-center mb-3">
-          <img src="assets/footage/volcanoria.png" alt="Logo Volcanoria" width="60" height="60" class="me-2">
-          <h5 class="fw-bold mb-0" style="color: #ff8c32;">Volcanoria</h5>
+          <img src="asset/Logo.png" alt="Logo Volcanoria" width="60" height="60" class="me-2">
+          <h5 class="fw-bold mb-0" style="color: #ff8c32;">NadaVulkanik</h5>
         </div>
         <p class="text-light opacity-75">
           Volcanoria adalah platform informasi yang didedikasikan untuk meningkatkan kesadaran dan pemahaman tentang bencana alam, 
@@ -245,7 +191,7 @@ if (!empty($_GET)) {
       <div class="col-md-6 col-lg-4">
         <h5 class="fw-bold mb-3" style="color: #ff8c32;">Kontak Kami</h5>
         <ul class="text-light opacity-75">
-          <li><i class="ri-mail-line me-2 text-light"></i> info@volcanoria.com</li>
+          <li><i class="ri-mail-line me-2 text-light"></i> info@NadaVulkanik.com</li>
           <li><i class="ri-phone-line me-2 text-light"></i> 123-456-7890</li>
           <li><i class="ri-map-pin-line me-2 text-light"></i> Jl. Babarsari No.10, Yogyakarta</li>
         </ul>
@@ -269,7 +215,7 @@ if (!empty($_GET)) {
 
     <!-- Copyright -->
     <div class="text-light opacity-75">
-      © 2024 <span style="color: #ff8c32;">Volcanoria</span>. All Rights Reserved.
+      © 2024 <span style="color: #ff8c32;">NadaVulkanik</span>. All Rights Reserved.
     </div>
   </div>
 </footer>
@@ -291,3 +237,4 @@ if (!empty($_GET)) {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
