@@ -10,6 +10,8 @@
 html, body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  height: 100%;
 }
 
 .navbarr {
@@ -73,36 +75,98 @@ html, body {
 }
 .dropdown:hover .dropdown-menu { display: block; }
 
-.carousel-container {
-  width: 40%;           /* diperkecil dari 60% */
-  max-width: 500px;     /* maksimal lebar lebih kecil */
-  min-width: 220px;
-  margin: 100px auto 2rem auto;
+/* --- HERO VIDEO SLIDER 21:9 --- */
+.home {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  aspect-ratio: 21/9;
+  height: auto !important;
+  min-height: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #0f0e17;
 }
-.carousel-container .carousel-inner,
-.carousel-container .carousel-item { overflow: hidden; }
-.carousel-container img {
+
+.video-slide {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
-  height: 220px;        /* lebih kecil, tetap crop otomatis */
-  object-fit: cover;    /* crop otomatis, bagian tengah gambar */
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  display: none;
+  background: #000;
+}
+.video-slide.active {
   display: block;
 }
-.carousel-container .carousel-caption {
-  left: 0; right: 0; bottom: 1rem;
-  text-align: left;
-  padding: 0.5rem 1rem;
-  max-width: 90%;
-  margin-left: 1rem;
+
+.content-slide {
+  position: absolute;
+  /* Tengah secara vertikal pada area video */
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  max-width: 80vw;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(.77,0,.18,1), transform 0.8s cubic-bezier(.77,0,.18,1);
+  pointer-events: none;
+}
+.content-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
 }
 
-@media (max-width: 768px) {
-  .carousel-container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0 0.5rem;
+.slider-navigation {
+  position: absolute;
+  bottom: 40px;
+  left: 10%;
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+  border: none;
+  transition: opacity 0.2s, background 0.2s;
+}
+.slider-navigation .nav-btn.active {
+  background: #1a1a2e;
+  opacity: 1;
+}
+
+/* Responsive: tetap 21:9 di mobile */
+@media (max-width: 900px) {
+  .home {
+    aspect-ratio: 21/9;
+    height: auto !important;
+    min-height: 0;
   }
-  .carousel-container img { height: 160px; object-fit: cover; }
+  .content-slide {
+    top: 10%;
+    left: 5%;
+    max-width: 90vw;
+  }
 }
-
-/* Spasi atas agar konten tidak tertutup navbar */
-.clearfix, main, .carousel-container { margin-top: 100px; }
+@media (max-width: 600px) {
+  .home {
+    aspect-ratio: 21/9;
+    height: auto !important;
+    min-height: 0;
+  }
+  .content-slide {
+    top: 5%;
+    left: 3%;
+    max-width: 96vw;
+  }
+}
