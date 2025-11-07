@@ -1,0 +1,281 @@
+/* ===== FONT SETUP ===== */
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('../asset/poppins.bold.ttf');
+}
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../asset/poppins.regular.ttf');
+}
+
+/* ===== GLOBAL ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background: #000000;
+  color: #000000;
+  font-family: 'PoppinsRegular', sans-serif;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbarr {
+  background: rgba(19, 18, 28, 0.95);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 1rem 3rem;
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  transition: background 0.3s ease-in-out;
+}
+
+.navbarr nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.Logo h2 {
+  font-family: 'PoppinsBold', sans-serif;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ff8906;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fffffe;
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #ff8906;
+}
+
+/* Dropdown */
+.dropdown { position: relative; }
+.dropdown-toggle::after {
+  content: ' ▼';
+  font-size: 0.7em;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #232230;
+  border-radius: 8px;
+  min-width: 200px;
+  margin-top: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fffffe;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+.dropdown-menu a:hover {
+  background: #ff8906;
+  color: #0f0e17;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+
+  background:
+    radial-gradient(circle at bottom, rgba(255,80,0,0.4), rgba(0,0,0,0.9) 70%),
+    url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1920&q=80')
+      center/cover no-repeat;
+}
+
+
+.hero-text {
+  max-width: 700px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #ff8906;
+}
+
+.hero p {
+  margin: 20px 0;
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #ff8906;
+  color: #fff;
+  border: none;
+  padding: 12px 36px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: scale(1.07);
+  background-color: #ff9d3b;
+}
+
+/* ==== PREMIUM IMPACT CARD ==== */
+.impact-card {
+  background: rgba(22,22,22,0.55);   /* gelap elegan */
+  backdrop-filter: blur(12px);
+}
+
+.impact-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ff8906;
+  margin-bottom: 50px;
+  font-family: 'PoppinsBold', sans-serif;
+
+  /* tambahan efek premium */
+  text-shadow: 0 0 8px rgba(255, 137, 6, 0.5);
+  letter-spacing: 1px;
+}
+
+/* GARIS NEON ATAS */
+.impact-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 70%;
+  height: 3px;
+  background: linear-gradient(90deg,#ff8906,#ffb36b,#ff8906);
+  transform: translateX(-50%);
+  border-radius: 20px;
+  opacity: 0.7;
+}
+
+/* HOVER EFECT PREMIUM */
+.impact-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255,137,6,0.35);
+  border-color: rgba(255,137,6,0.5);
+}
+
+/* GAMBAR PREMIUM */
+.impact-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: transform .3s ease;
+}
+
+/* Zoom gambar saat hover */
+.impact-card:hover .impact-img {
+  transform: scale(1.06);
+}
+
+/* JUDUL CARD */
+.impact-card h3 {
+  color: #ff8906;
+  font-family: 'PoppinsBold';
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+/* TEKS */
+.impact-card p {
+  color: #eaeaea;
+}
+
+/* GRID RAPIH */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+/* ===== BUTTON SECTION ===== */
+.center-btn {
+  margin-top: 50px;
+}
+
+.btn-secondary {
+  background: none;
+  border: 2px solid #ff8906;
+  color: #ff8906;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #ff8906;
+  color: #fff;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 25px;
+  font-size: 0.9rem;
+  color: #aaa;
+  letter-spacing: 0.3px;
+  border-top: 1px solid #222;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbarr { padding: 0.8rem 1.5rem; }
+  .hero h1 { font-size: 2.2rem; }
+  .impact-section { padding: 50px 20px; }
+}
