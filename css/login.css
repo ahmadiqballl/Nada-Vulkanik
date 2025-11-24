@@ -1,0 +1,31 @@
+/* Login page styles - centered card, Poppins, orange accent */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root{
+  --bg-dark-1: #131313;
+  --bg-dark-2: #222222;
+  --accent: #FF8906;
+  --card-bg: #ffffff;
+  --muted: #6b6b78;
+}
+
+html,body{ height:100%; margin:0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; background: linear-gradient(135deg,var(--bg-dark-1),var(--bg-dark-2)); color:#111; }
+
+.login-wrap{ min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem; }
+.login-card{ width:100%; max-width:520px; background:var(--card-bg); border-radius:14px; box-shadow:0 12px 40px rgba(0,0,0,0.45); overflow:hidden; }
+.login-card .card-body{ padding:2.25rem; }
+.login-brand{ text-align:center; margin-bottom:1rem; }
+.login-brand h2{ margin:0; font-weight:800; color:var(--bg-dark-1); }
+.login-brand p{ margin:0.35rem 0 0; color:var(--muted); }
+
+.form-control{ border-radius:10px; padding:0.9rem 0.85rem; box-shadow:none; border:1px solid rgba(0,0,0,0.08); }
+.form-control:focus{ box-shadow:0 6px 24px rgba(255,137,6,0.08); border-color:var(--accent); }
+
+.btn-login{ background:linear-gradient(90deg,var(--accent), #ffb36a); color:#000; border:0; padding:0.9rem; border-radius:10px; font-weight:700; }
+.btn-login:hover{ filter:brightness(0.98); }
+
+.link-muted{ color:var(--muted); text-decoration:none; }
+
+.alert{ border-radius:8px; }
+
+@media (max-width:480px){ .login-card{ border-radius:10px; } .login-card .card-body{ padding:1.25rem; } }
