@@ -1,0 +1,36 @@
+/* Definisi page styles - Poppins headings bold, orange hero, black text */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
+:root{
+  --accent: #FF6B35;
+  --accent-dark: #E65A25;
+  --text: #0b0a0a;
+  --muted: #6b6b78;
+  --card-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; margin:0; font-family:'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color:var(--text); background:#fff; }
+
+.navbar-brand{ color:var(--accent) !important; font-weight:700; }
+
+/* Hero */
+.hero-section{ background:var(--accent); color:var(--text); padding:4.25rem 0; text-align:center; }
+.hero-section h1{ font-weight:800; font-size:2.4rem; margin-bottom:0.25rem; letter-spacing:-0.6px; }
+.hero-section p.lead{ color: rgba(0,0,0,0.85); font-size:1.05rem; }
+.hero-section img{ display:block; margin:1.25rem auto 0; max-width:760px; width:100%; height:auto; border-radius:12px; box-shadow:var(--card-shadow); }
+
+/* Content */
+.content-card{ background:#fff; border-radius:14px; box-shadow:var(--card-shadow); border-left:6px solid var(--accent); }
+.content-card h2, .content-card h4, .content-card h5{ font-weight:700; }
+.content-card .card-body p{ color: #222; }
+
+.card.bg-light{ background:#fafafa !important; }
+.table thead.table-dark{ background:#222; color:#fff; }
+.table thead.table-dark th{ color:#fff; }
+
+.alert-warning{ border-left:6px solid var(--accent); }
+
+.text-orange{ color:var(--accent); }
+
+@media (max-width:768px){ .hero-section h1{ font-size:1.6rem; } .hero-section{ padding:3rem 0; } }
