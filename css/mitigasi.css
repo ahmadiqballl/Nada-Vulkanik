@@ -1,0 +1,30 @@
+/* Mitigasi page styles - Poppins, orange accents, readable steps */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+  --accent: #FF8906;
+  --muted: #6b6b78;
+  --card-shadow: 0 12px 36px rgba(9,13,19,0.06);
+}
+
+html,body{ font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; padding:0; background:#fff; color:#111; }
+
+.navbar-brand{ color:var(--accent) !important; font-weight:700; }
+
+.section-hero{ padding:3.5rem 0; background: linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.02)); }
+
+.container h1{ font-weight:800; letter-spacing:-0.5px; }
+
+.alert-info{ background: linear-gradient(90deg, rgba(255,137,6,0.08), rgba(255,255,255,0.9)); border:0; box-shadow:var(--card-shadow); border-radius:12px; }
+.alert-info h4{ color:var(--accent); font-weight:700; }
+
+/* Steps styling */
+ol.mitigation-steps{ margin:0; padding-left:1.25rem; }
+ol.mitigation-steps li{ margin:0.8rem 0; padding:0.6rem 0.75rem; background:#fff; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.04); }
+
+/* Make list items more informative */
+ol.mitigation-steps li::marker{ color:var(--accent); font-weight:700; }
+
+@media (max-width:768px){
+  .container h1{ font-size:1.6rem; }
+}
