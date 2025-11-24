@@ -1,0 +1,45 @@
+/* Dampak letusan styles - Poppins, clear cards for positive/negative impacts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root{
+  --primary-orange: #FF6B35;
+  --positive-green: #28a745;
+  --negative-red: #dc3545;
+  --muted: #6b6b78;
+  --card-shadow: 0 12px 36px rgba(9,13,19,0.06);
+}
+
+html,body{ margin:0; padding:0; font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; color:#111; background:#fff; }
+
+/* Navbar */
+.navbar-brand{ color:var(--primary-orange) !important; font-weight:700; }
+
+/* Hero */
+.hero-section{ position:relative; background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35)); color:#fff; }
+.hero-section .container{ position:relative; z-index:2; padding:4.5rem 1rem; }
+.hero-section .display-4{ font-weight:800; letter-spacing:-1px; }
+.hero-section p.lead{ color:rgba(255,255,255,0.95); }
+
+/* Impact cards */
+.impact-card{ border-radius:12px; overflow:hidden; transition:transform 0.28s ease, box-shadow 0.28s ease; box-shadow:var(--card-shadow); }
+.impact-card:hover{ transform:translateY(-6px); box-shadow:0 20px 48px rgba(9,13,19,0.12); }
+
+.impact-negative{ border-left:5px solid var(--negative-red); }
+.impact-positive{ border-left:5px solid var(--positive-green); }
+
+.card-header.bg-danger{ background: linear-gradient(90deg, #ff7a7a, #dc3545); color:#fff; font-weight:700; }
+.card-header.bg-success{ background: linear-gradient(90deg, #bff3c9, #28a745); color:#000; font-weight:700; }
+
+.card-body h6{ font-weight:700; margin-top:0.2rem; }
+.card-body ul{ margin:0.5rem 0 0 1rem; }
+
+/* Footer */
+footer{ background:#111; color:#ddd; padding:2.25rem 0; }
+
+/* Utilities */
+.text-muted{ color:var(--muted) !important; }
+
+@media (max-width:768px){
+  .hero-section .container{ padding:3rem 1rem; }
+  .hero-section .display-4{ font-size:1.6rem; }
+}
